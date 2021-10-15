@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --dark-green-color: #96ceb4;
+    --light-yellow-color: #ffeead;
+    --red-color: #ff6f69;
+    --dark-yellow-color: #ffcc5c;
+    --light-green-color: #88d8b0;
+  }
+  
+  body {
+    color: var(--dark-green-color);
+    font-family: Verdana, Helvetica, sans-serif;
+    background-color: var(--light-yellow-color);
+  }
+
+  header {
+      background-color: var(--red-color);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: -webkit-sticky;
+      position: sticky;
+      padding: 20px 35px;
+      background-size: cover;
+      background-position: 80%;
+      background-attachment: fixed;
+  }
