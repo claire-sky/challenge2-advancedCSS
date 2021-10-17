@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
   
 :root {
     --dark-green-color: #96ceb4;
@@ -11,13 +11,13 @@
     --dark-yellow-color: #ffcc5c;
     --light-green-color: #88d8b0;
     --shadow: 0 0 20px rgba(0, 0, 0, 0.5)
-  }
+}
   
 body {
-    color: var(--dark-green-color);
+    color: var(--light-green-color);
     font-family: Verdana, Helvetica, sans-serif;
     background-color: var(--light-yellow-color);
-  }
+}
 
 .flex-column {
     display: flex;
@@ -29,53 +29,51 @@ body {
 }
 
 .section-title {
-    width: 25%;
-    text-shadow: var(--shadow);
-    border-right: 5px solid var(--dark-green-color);
+    width: 15%;
+    border-right: 5px solid var(--light-green-color);
 }
 
 /* HEADER */
 header {
+    padding: 20px;
     background-color: var(--red-color);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 1.5%;
-    background-size: cover;
-    background-position: 80%;
-    background-attachment: fixed;
-  }
+}
 
-  header h1 {
+header h1 {
     font-weight: bold;
     font-size: 48px;
-    color: var(--dark-yellow-color);
+    color: var(--light-yellow-color);
     margin: 0;
     text-shadow: var(--shadow);
-  }
-  header a {
+}
+
+header a {
     text-decoration: none;
-    color: var(--dark-yellow-color);
-  }
+    color: var(--light-yellow-color);
+}
 
-  header nav {
+header nav ul {
     margin: 5px;
-  }
-
-  header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     list-style: none;
-  }
+}
   
-  header nav ul li a {
+header nav ul li a {
     padding: 20px;
     font-size: 28px;
-    font-weight: bold;
     text-shadow: var(--shadow);
-  }
+}
+
+header nav ul li a:hover {
+    font-weight: bold;
+    color: var(--dark-yellow-color);
+}
 
 /* HERO */
 .hero {
@@ -89,9 +87,12 @@ header {
     flex-wrap: wrap;
 }
 
-.hero-profile {
-    border-color: var(--light-yellow-color);
-    padding: 100px;
+.hero-profile img{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    border: 10px solid var(--light-yellow-color);
+    margin: 50px;
     display: flex;
     flex-wrap: wrap;
     z-index: 9999;
@@ -102,7 +103,6 @@ header {
     display: flex;
     flex-wrap: wrap;
     margin: 1.5%;
-    justify-content: flex-start;
 }
 
 .about-me p {
@@ -115,41 +115,51 @@ header {
 /* MY WORK */
 .my-work {
     margin: 1.5%;
-    flex: 1;
-    justify-content: space-between;
+}
+
+.my-work article {
+    margin: 0 0 20px 20px;
+    justify-content: space-around;
 }
 
 .my-work img {
-    margin: 0 20px 20px 20px;
     width: 100%;
-    flex-wrap: wrap;
     border: 5px solid var(--light-green-color);
     border-radius: 10px;
 }
 
 .my-work-lesser {
-    flex: 50%;
+    flex-wrap: wrap;
     column-gap: 20px;
-}
+    min-width: 300px;
+    width: 50%;}
 
 /* FOOTER */
 footer {
     justify-content: flex-start;
 }
 
-footer ul {
+footer div ul {
     margin: 5px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     list-style: none;
-    justify-content: space-between;
 }
   
-  footer ul li {
-    padding: 20px;
-    text-shadow: var(--shadow);
+footer div ul li {
+    margin: 20px;
+    padding: 0 0 5px 0;
+    justify-content: space-between;
+    border-bottom: 5px solid var(--light-green-color);
+}
+
+footer div ul li a {
     text-decoration: none;
-    font-style: normal;
+    color: var(--light-green-color);
+}
+
+footer div ul li a:hover {
+    font-weight: bold;
     color: var(--dark-green-color);
 }
