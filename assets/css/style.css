@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   
-  :root {
+:root {
     --dark-green-color: #96ceb4;
     --light-yellow-color: #ffeead;
     --red-color: #ff6f69;
@@ -12,22 +12,32 @@
     --light-green-color: #88d8b0;
   }
   
-  body {
+body {
     color: var(--dark-green-color);
     font-family: Verdana, Helvetica, sans-serif;
     background-color: var(--light-yellow-color);
   }
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
 /* HEADER */
-  header {
-      background-color: var(--red-color);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 20px;
-      background-size: cover;
-      background-position: 80%;
-      background-attachment: fixed;
+header {
+    background-color: var(--red-color);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5%;
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
   }
 
   header h1 {
@@ -69,17 +79,48 @@
     margin-bottom: 25px;
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-  .hero-cta {
-    width: 35%;
-    margin: 3.5%;
+.hero-profile {
+    border-color: var(--light-yellow-color);
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 9999;
+}
+
+/* ABOUT ME */
+.about-me {
+    text-align: left;
+    margin: 1.5%;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+/* MY WORK */
+.my-work {
+    margin: 1.5%;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    flex: 1;
   }
+  
+.my-work img {
+    width: 100%;
+}
+
+.my-work h2 {
+    margin-bottom: 25px;
+}
+
+
 
 /* FOOTER */
   footer {
     width: 100%;
-    padding: 20px;
+    padding: 1.5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
