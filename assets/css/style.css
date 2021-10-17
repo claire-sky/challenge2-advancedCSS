@@ -18,15 +18,84 @@
     background-color: var(--light-yellow-color);
   }
 
+/* HEADER */
   header {
       background-color: var(--red-color);
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      position: -webkit-sticky;
-      position: sticky;
-      padding: 20px 35px;
+      padding: 20px;
       background-size: cover;
       background-position: 80%;
       background-attachment: fixed;
   }
+
+  header h1 {
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--dark-yellow-color);
+    margin: 0;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  header a {
+    text-decoration: none;
+    color: var(--dark-yellow-color);
+  }
+
+  header nav {
+    margin: 5px;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  
+  header nav ul li a {
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+/* HERO */
+.hero {
+    background-image: url('../images/lemon-tea.jpg');
+    height: 400px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-size: cover;
+    background-position: center;
+}
+
+  .hero-cta {
+    width: 35%;
+    margin: 3.5%;
+  }
+
+/* FOOTER */
+  footer {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  footer h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  footer ul {
+    font-size: 16px;
+    margin: 5px;
+    line-height: 1.5;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
