@@ -10,6 +10,7 @@
     --red-color: #ff6f69;
     --dark-yellow-color: #ffcc5c;
     --light-green-color: #88d8b0;
+    --shadow: 0 0 20px rgba(0, 0, 0, 0.5)
   }
   
 body {
@@ -25,7 +26,12 @@ body {
 
 .flex-row {
     display: flex;
-    flex-direction: row;
+}
+
+.section-title {
+    width: 25%;
+    text-shadow: var(--shadow);
+    border-right: 5px solid var(--dark-green-color);
 }
 
 /* HEADER */
@@ -45,7 +51,7 @@ header {
     font-size: 48px;
     color: var(--dark-yellow-color);
     margin: 0;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-shadow: var(--shadow);
   }
   header a {
     text-decoration: none;
@@ -68,7 +74,7 @@ header {
     padding: 20px;
     font-size: 28px;
     font-weight: bold;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-shadow: var(--shadow);
   }
 
 /* HERO */
@@ -93,50 +99,57 @@ header {
 
 /* ABOUT ME */
 .about-me {
-    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
     margin: 1.5%;
+    justify-content: flex-start;
+}
+
+.about-me p {
+    padding: 0 0 0 20px;
     font-size: 18px;
     line-height: 1.2;
+    color: var(--light-green-color);
 }
 
 /* MY WORK */
 .my-work {
     margin: 1.5%;
-    background: var(--secondary-color);
-    color: var(--primary-color);
     flex: 1;
-  }
-  
+    justify-content: space-between;
+}
+
 .my-work img {
+    margin: 0 20px 20px 20px;
     width: 100%;
+    flex-wrap: wrap;
+    border: 5px solid var(--light-green-color);
+    border-radius: 10px;
 }
 
-.my-work h2 {
-    margin-bottom: 25px;
+.my-work-lesser {
+    flex: 50%;
+    column-gap: 20px;
 }
-
-
 
 /* FOOTER */
-  footer {
-    width: 100%;
-    padding: 1.5%;
+footer {
+    justify-content: flex-start;
+}
+
+footer ul {
+    margin: 5px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  footer h2 {
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  footer ul {
-    font-size: 16px;
-    margin: 5px;
-    line-height: 1.5;
     align-items: center;
-    text-decoration: none;
     list-style: none;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    justify-content: space-between;
+}
+  
+  footer ul li {
+    padding: 20px;
+    text-shadow: var(--shadow);
+    text-decoration: none;
+    font-style: normal;
+    color: var(--dark-green-color);
 }
