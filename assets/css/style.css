@@ -22,6 +22,7 @@ body {
 .flex-column {
     display: flex;
     flex-direction: column;
+    width: 80%;
 }
 
 .flex-row {
@@ -29,7 +30,7 @@ body {
 }
 
 .section-title {
-    width: 15%;
+    min-width: 200px;
     border-right: 5px solid var(--light-green-color);
 }
 
@@ -37,7 +38,6 @@ body {
 header {
     padding: 20px;
     background-color: var(--red-color);
-    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -100,13 +100,12 @@ header nav ul li a:hover {
 
 /* ABOUT ME */
 .about-me {
-    display: flex;
-    flex-wrap: wrap;
     margin: 1.5%;
 }
 
 .about-me p {
-    padding: 0 0 0 20px;
+    width: 95%;
+    padding: 0 0 20px 20px;
     font-size: 18px;
     line-height: 1.2;
     color: var(--light-green-color);
@@ -117,26 +116,49 @@ header nav ul li a:hover {
     margin: 1.5%;
 }
 
-.my-work article {
-    margin: 0 0 20px 20px;
+.my-work figure {
+    margin: 0 0 0 20px;
     justify-content: space-around;
 }
 
 .my-work img {
-    width: 100%;
+    width: 98%;
     border: 5px solid var(--light-green-color);
     border-radius: 10px;
 }
+
+.my-work figcaption {
+    width: 20%;
+    position: relative;
+    bottom: 40%;
+    left: 0;
+    padding: 10px;
+    color: var(--light-yellow-color);
+    background-color: var(--light-green-color);
+    border-radius: 10px;
+}
+
+.my-work a {
+    text-decoration: none;
+    max-width: 49%;
+    flex-wrap: wrap;
+}   
 
 .my-work-lesser {
     flex-wrap: wrap;
     column-gap: 20px;
     min-width: 300px;
-    width: 50%;}
+}
+
+.my-work-lesser figcaption {
+    width: 40%;
+    flex-wrap: wrap;
+}
 
 /* FOOTER */
 footer {
     justify-content: flex-start;
+    margin: 1.5%;
 }
 
 footer div ul {
@@ -159,7 +181,57 @@ footer div ul li a {
     color: var(--light-green-color);
 }
 
-footer div ul li a:hover {
+footer div ul li:hover {
     font-weight: bold;
     color: var(--dark-green-color);
 }
+
+/*MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    .flex-row {
+        justify-content: center;
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .section-title {
+        border-bottom: 5px solid var(--light-green-color);
+        border-right: none;
+    }
+
+    .my-work figure {
+        margin: 20px 0 0 0;
+    }
+
+    .my-work figcaption {
+        width: 50%;
+    }
+
+    .my-work-lesser figcaption {
+        width: 80%;
+    }
+    
+    header h1, footer h2 {
+        width: 100%;
+        text-align: center;
+    }
+  
+    header nav ul, footer div ul {
+        width: 100%;
+        justify-content: center;
+    }
+
+    header a, footer a {
+        font-size: 20px;
+    }
+  
+    .section-title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-me div {
+        margin: 20px 0 0 0;
+        width: 100%;
+    }
+  }
